@@ -57,7 +57,7 @@ void dtr0xx_ioComponent::read_gpio_() {
   delayMicroseconds(10);
 
   if (this->dingtian_rck_pin_ != nullptr)
-    this->dingtian_rck_pin_->digital_write(false);
+    this->dingtian_rck_pin_->digital_write(true);
 
   for (uint8_t i = 0; i < this->sr_count_; i++) {
     for (uint8_t j = 0; j < 8; j++) {
