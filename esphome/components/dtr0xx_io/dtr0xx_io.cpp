@@ -9,6 +9,8 @@ static const char *const TAG = "dtr0xx_io";
 void dtr0xx_ioComponent::setup() {
   ESP_LOGCONFIG(TAG, "Setting up dtr0xx_io...");
 
+  output_bits_.resize(8, 1);
+
   // initialize pins
   this->dingtian_clk_pin_->setup();
   this->dingtian_q7_pin_->setup();
